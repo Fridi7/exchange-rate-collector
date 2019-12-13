@@ -1,0 +1,76 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+package fridi7.exchange.proto;
+
+// The collector service definition.
+service Collector {
+   // Sends request status of service
+  rpc ServiceUptime (UptimeRequest) returns (UptimeReply) {}
+  // Sends stop signal
+  rpc StopSignal (StopRequest) returns (StopReply) {}
+  // Sends start signal
+  rpc StartSignal (StartRequest) returns (StartReply) {}
+  // Sends request to change timeout
+  rpc ChangeTimeout (ChangeTimeoutRequest) returns (ChangeTimeoutReply) {}
+  // Sends a request for the latest currency data
+  rpc ExchangeRates (ExchangeRatesRequest) returns (ExchangeRatesReply) {}
+
+}
+
+//requests
+
+// The request message to status of service
+message UptimeRequest {
+}
+
+// The request message to stop service
+message StopRequest {
+}
+
+// The request message to start service
+message StartRequest {
+}
+
+// The request message to change timeout
+message ChangeTimeoutRequest {
+  int32 timeout = 1;
+}
+
+// The request message to exchange rates
+message ExchangeRatesRequest {
+  string name = 1;
+  int32 quantity = 2;
+}
+
+//responses
+
+// The response message to status of service
+message UptimeReply {
+  string message = 1;
+  int32 other = 2;
+}
+
+// The response message to stop service
+message StopReply {
+  string message = 1;
+  int32 other = 2;
+}
+
+// The response message to start service
+message StartReply {
+  string message = 1;
+  int32 other = 2;
+}
+
+// The response message to change timeout
+message ChangeTimeoutReply {
+  string message = 1;
+  int32 other = 2;
+}
+
+// The response message to exchange rates
+message ExchangeRatesReply {
+  string message = 1;
+  int32 other = 2;
+}
