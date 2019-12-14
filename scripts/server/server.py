@@ -59,7 +59,7 @@ def latest_exchange(client, name, quantity):
 
 
 class Collector(exchange_pb2_grpc.CollectorServicer):
-     def ServiceUptime(self, request, context):
+    def ServiceUptime(self, request, context):
         toc = datetime.datetime.now()
         up_time = (toc - tic)
         logging.info("{}".format("Client requested uptime"))
