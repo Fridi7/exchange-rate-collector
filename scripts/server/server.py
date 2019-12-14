@@ -21,6 +21,7 @@ def plan():
 
 class Running:
     def __call__(self, count=10, sleep_time=timeout):
+        plan()
         sched.add_job(plan, 'interval', seconds=sleep_time, id='my_job')
         sched.start()
         return
