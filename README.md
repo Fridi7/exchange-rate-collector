@@ -21,8 +21,8 @@ from directory protos:
 
 ## Usage
 
-    ./server.py 
-    ./client_example.py
+    python3 server.py 
+    python3 client_example.py
 
 ##### The service processes the commands:
 -     ping
@@ -45,3 +45,8 @@ return n (quantity) of the last records from the database by currency (rate)
 for rate = "Евро" and quantity = 3:
  
 ![Image alt](https://github.com/Fridi7/exchange-rate-collector/blob/master/scripts/example_client/result%20example.png)
+
+
+### Available currencies
+
+Доллар США, Евро, Австралийский доллар, Азербайджанский манат, Фунт стерлингов Соединенного королевства, Армянских драмов, Белорусский рубль, Болгарский лев, Бразильский реал, Венгерских форинтов, Гонконгских долларов, Датских крон, Индийских рупий, Казахстанских тенге, Канадский доллар, Киргизских сомов, Китайских юаней, Молдавских леев, Норвежских крон, Польский злотый, Румынский лей, СДР (специальные права заимствования), Сингапурский доллар, Таджикских сомони, Турецкая лира, Новый туркменский манат, Узбекских сумов, Украинских гривен, Чешских крон, Шведских крон, Швейцарский франк, Южноафриканских рэндов, Вон Республики Корея, Японских иен.
